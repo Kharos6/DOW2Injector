@@ -96,7 +96,7 @@ std::vector<MapAddr> map_lists;
 size_t generateMapList(std::string file_path, size_t g_index) {
 
 
-    void* dat = std::malloc(100); //no idea how big this has to be
+    void* dat = std::malloc(10000); //no idea how big this has to be (apparently it has to be big)
     DWORD32 t = (DWORD32)dat; //can't use the default map list since it seems to already have it packed tight
     char* d = (char*)t;
     *(DWORD32*)(t + 0x48) = 0;
